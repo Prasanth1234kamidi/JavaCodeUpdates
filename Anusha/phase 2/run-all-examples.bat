@@ -1,13 +1,13 @@
 @echo off
 echo ========================================
-echo Java 17 Features Demonstration
+echo Java 17 Features Comprehensive Demo
 echo ========================================
 echo.
 
 echo 1. Enhanced PRNG
 cd EnhancedPRNG
-call run-before.bat
-call run-after.bat
+javac PRNGBefore.java && java PRNGBefore
+javac PRNGAfter.java && java PRNGAfter
 cd ..
 
 echo.
@@ -25,17 +25,19 @@ javac DeprecationsAfter.java && java DeprecationsAfter
 cd ..
 
 echo.
-echo 4. Foreign Function & Memory API (requires special flags)
+echo 4. Foreign Function & Memory API
 cd ForeignFunctionMemory
 javac FFMBefore.java && java FFMBefore
-echo Note: FFMAfter requires --add-modules jdk.incubator.foreign --enable-native-access=ALL-UNNAMED
+javac --enable-preview --release 21 FFMAfter.java
+java --enable-preview --enable-native-access=ALL-UNNAMED FFMAfter
 cd ..
 
 echo.
-echo 5. Vector API (requires special flags)
+echo 5. Vector API
 cd VectorAPI
 javac VectorBefore.java && java VectorBefore
-echo Note: VectorAfter requires --add-modules jdk.incubator.vector
+javac --add-modules jdk.incubator.vector VectorAfter.java
+java --add-modules jdk.incubator.vector VectorAfter
 cd ..
 
 echo.
@@ -53,7 +55,43 @@ javac EncapsulationAfter.java && java EncapsulationAfter
 cd ..
 
 echo.
+echo 8. UTF-8 String and File Handling
+cd UTF8Handling
+javac UTF8Before.java && java UTF8Before
+javac UTF8After.java && java UTF8After
+cd ..
+
+echo.
+echo 9. Garbage Collection Improvements
+cd GarbageCollection
+javac GCBefore.java && java GCBefore
+javac GCAfter.java && java GCAfter
+cd ..
+
+echo.
+echo 10. Packaging Tool (jpackage)
+cd PackagingTool
+javac PackagingBefore.java && java PackagingBefore
+javac PackagingAfter.java && java PackagingAfter
+cd ..
+
+echo.
+echo 11. Helpful NullPointerException Messages
+cd HelpfulNPE
+javac NPEBefore.java && java NPEBefore
+javac NPEAfter.java && java NPEAfter
+cd ..
+
+echo.
+echo 12. Hidden Classes
+cd HiddenClasses
+javac HiddenBefore.java && java HiddenBefore
+javac HiddenAfter.java && java HiddenAfter
+cd ..
+
+echo.
 echo ========================================
-echo All examples completed!
+echo All 12 Java 17 Features Completed!
+echo 24 Examples (12 Before + 12 After)
 echo ========================================
 pause
