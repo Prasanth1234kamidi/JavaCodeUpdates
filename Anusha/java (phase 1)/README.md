@@ -9,8 +9,9 @@ This repository demonstrates Java 17 features with before/after code examples an
 - **[sealed-classes/](./sealed-classes/)** - Sealed Classes (finalized) - Controlled inheritance
 - **[pattern-matching/](./pattern-matching/)** - Enhanced Pattern Matching - instanceof improvements
 - **[switch-expressions/](./switch-expressions/)** - Switch Expressions (stable) - Expression-based switch
+- **[string-templates/](./string-templates/)** - String Templates (concept) - String interpolation
 - **[encapsulation/](./encapsulation/)** - JDK Internals Encapsulation - Security improvements
-- **[virtual-threads/](./virtual-threads/)** - Virtual Threads (preview) - Lightweight concurrency
+- **[virtual-threads/](./virtual-threads/)** - Virtual Threads (concept) - Lightweight concurrency
 
 ### Core Java Concepts
 - **[multithreading-concurrency/](./multithreading-concurrency/)** - Concurrent programming patterns

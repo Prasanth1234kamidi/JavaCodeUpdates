@@ -6,7 +6,9 @@ public class RunAll {
         runExample("Sealed Classes", "sealed-classes");
         runExample("Pattern Matching", "pattern-matching");
         runExample("Switch Expressions", "switch-expressions");
+        runExample("String Templates", "string-templates");
         runExample("Encapsulation", "encapsulation");
+        runExample("Virtual Threads", "virtual-threads");
         runExample("Multithreading & Concurrency", "multithreading-concurrency");
         runExample("JVM & Memory Management", "jvm-memory");
         
@@ -37,16 +39,19 @@ MANUAL COMMANDS TO RUN EACH EXAMPLE:
 4. Switch Expressions:
    cd switch-expressions && javac *.java && java SwitchDemo
 
-5. Encapsulation:
+5. String Templates:
+   cd string-templates && javac *.java && java StringTemplateDemo
+
+6. Encapsulation:
    cd encapsulation && javac *.java && java EncapsulationDemo
 
-6. Virtual Threads (Preview):
-   cd virtual-threads && javac --enable-preview --source 17 *.java && java --enable-preview VirtualThreadDemo
+7. Virtual Threads (Concept):
+   cd virtual-threads && javac *.java && java VirtualThreadDemo
 
-7. Concurrency:
+8. Concurrency:
    cd multithreading-concurrency && javac *.java && java ConcurrencyDemo
 
-8. Memory Management:
+9. Memory Management:
    cd jvm-memory && javac *.java && java MemoryDemo
 
 RUN ALL AT ONCE:
